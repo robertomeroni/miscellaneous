@@ -1,0 +1,51 @@
+\documentclass[10pt,landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+\usepackage[nosf]{kpfonts}
+\usepackage[t1]{sourcesanspro}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[top=0mm,bottom=1mm,left=0mm,right=1mm]{geometry}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{microtype}
+\usepackage{pdfpages}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\let\bar\overline
+
+\linespread{0.9} % adjust line spacing
+
+
+\begin{document}
+% no spacing indentation and less space between each item
+\setlist[itemize]{itemsep=0pt, parsep=0pt, leftmargin=*}
+\setlist[enumerate]{itemsep=0pt, parsep=0pt,leftmargin=*}
+
+% sections titles
+\titleformat{\section}
+{\normalfont\footnotesize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\footnotesize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\footnotesize\bfseries}{\thesubsubsection}{1em}{}
+
+% space between sections
+\titlespacing*{\section}{0pt}{*0.8}{*0.4}
+\titlespacing*{\subsection}{0pt}{*0.8}{*0.4}
+\titlespacing*{\subsubsection}{0pt}{*0.8}{*0.4}
+
+%\footnotesize
+\small
+
+% adjust columns number
+\begin{multicols*}{5}
+
+% create a folder (e.g. "topics") with the content files and include them here
+\input{topics/}
+
+\end{multicols*}
+\end{document}
