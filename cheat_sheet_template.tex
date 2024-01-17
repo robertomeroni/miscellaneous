@@ -22,8 +22,10 @@
 
 \begin{document}
 % no spacing indentation and less space between each item
-\setlist[itemize]{itemsep=0pt, parsep=0pt, leftmargin=*}
-\setlist[enumerate]{itemsep=0pt, parsep=0pt,leftmargin=*}
+\setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt, leftmargin=*}
+\setlist[itemize,2]{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt, leftmargin=*}
+\setlist[enumerate]{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt, leftmargin=*}
+\setlist[enumerate,2]{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt, leftmargin=*}
 
 % sections titles
 \titleformat{\section}
@@ -32,11 +34,14 @@
 {\normalfont\footnotesize\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}
 {\normalfont\footnotesize\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalfont\footnotesize\bfseries}{\theparagraph}{1em}{}[:]
 
 % space between sections
 \titlespacing*{\section}{0pt}{*0.8}{*0.4}
 \titlespacing*{\subsection}{0pt}{*0.8}{*0.4}
 \titlespacing*{\subsubsection}{0pt}{*0.8}{*0.4}
+\titlespacing*{\paragraph}{0pt}{*0.8}{*0.4}
+\titlespacing*{\subparagraph}{0pt}{*0.8}{*0.4}
 
 %\footnotesize
 \small
@@ -44,7 +49,7 @@
 % adjust columns number
 \begin{multicols*}{5}
 
-% create a folder (e.g. "topics") with the content files and include them here
+% write your contents in files in the topic folder and include them here
 \input{topics/}
 
 \end{multicols*}
